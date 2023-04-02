@@ -1,6 +1,46 @@
 <section class="nav">
     <ul class="sub">
 
+        <li>
+            <a href="{{ route('about.index') }}">
+                @if (session('key') == 'jp')
+                    私たちに関しては
+                @else
+                    About Us
+                @endif
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('md') }}">
+                @if (session('key') == 'jp')
+                    MDのメッセージ
+                @else
+                    MD's Message
+                @endif
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('organization_chart') }}">
+                @if (session('key') == 'jp')
+                    組織図
+                @else
+                    Organization Chart
+                @endif
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('team') }}">
+                @if (session('key') == 'jp')
+                    私たちのチーム
+                @else
+                    Our Teams
+                @endif
+            </a>
+        </li>
+
         <li class="li09">
             <a href="{{ route('job.index') }}">
                 @if (session('key') == 'jp')
@@ -10,7 +50,7 @@
                 @endif
             </a>
         </li>
-        
+
         <li>
             <a href="{{ route('recruitment_information.index') }}" style="width: 300px">
                 @if (session('key') == 'jp')

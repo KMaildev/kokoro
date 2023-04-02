@@ -10,8 +10,25 @@
 
 <nav class="p_nav">
     <ul>
-        <li class="li07"><a href="../index.html">トップページ</a></li>
-        <li class="li08"><a href="../about/index.html">会社案内</a></li>
+        <li class="li07">
+            <a href="{{ route('home') }}">
+                @if (session('key') == 'jp')
+                    トップページ
+                @else
+                    Main Page
+                @endif
+            </a>
+        </li>
+
+        <li class="li08">
+            <a href="javascript:void(0)">
+                @if (session('key') == 'jp')
+                    会社案内
+                @else
+                    Company Profile
+                @endif
+            </a>
+        </li>
 
         <li class="li09">
             <a href="{{ route('job.index') }}">
@@ -59,12 +76,54 @@
 <section class="sub_nav">
     <section class="nav01 empty"></section>
     <section class="nav02">
-        <h3>会社案内</h3>
+        <h3>
+            @if (session('key') == 'jp')
+                会社案内
+            @else
+                Company Profile
+            @endif
+        </h3>
         <ul>
-            <li><a href="../about/message.html">ご挨拶</a></li>
-            <li><a href="../about/corporate.html">会社情報</a></li>
-            <li><a href="../about/idea/index.html">信頼される強い会社づくり</a></li>
-            <li><a href="../about/works/index.html">実績紹介</a></li>
+            <li>
+                <a href="{{ route('about.index') }}">
+                    @if (session('key') == 'jp')
+                        私たちに関しては
+                    @else
+                        About Us
+                    @endif
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('md') }}">
+                    @if (session('key') == 'jp')
+                        MDのメッセージ
+                    @else
+                        MD's Message
+                    @endif
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('organization_chart') }}">
+                    @if (session('key') == 'jp')
+                        組織図
+                    @else
+                        Organization Chart
+                    @endif
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('team') }}">
+                    @if (session('key') == 'jp')
+                        私たちのチーム
+                    @else
+                        Our Teams
+                    @endif
+                </a>
+            </li>
+
         </ul>
     </section>
 

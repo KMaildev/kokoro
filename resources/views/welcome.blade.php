@@ -26,45 +26,74 @@
     <nav class="top_0">
         <ul>
             <li class="li01">
-                <a href="business/index.html">
+                <a href="{{ route('about.index') }}">
                     <img src="{{ asset('common/img/top-menu-icon-01.png') }}" width="61" height="61"
                         alt="事業内容">
-                    事業内容
+                    @if (session('key') == 'jp')
+                        会社案内
+                    @else
+                        Company Profile
+                    @endif
                 </a>
             </li>
+
             <li class="li02">
-                <a href="about/works/index.html">
+                <a href="{{ route('recruitment_information.index') }}">
                     <img src="{{ asset('common/img/top-menu-icon-03.png') }}" width="61" height="61"
                         alt="実績紹介">
-                    実績紹介
+                    @if (session('key') == 'jp')
+                        海外人材紹介サービス
+                    @else
+                        Overseas Recruitment Services
+                    @endif
                 </a>
             </li>
+
             <li class="li03">
-                <a href="recruit/index.html">
+                <a href="{{ route('activities.index') }}">
                     <img src="{{ asset('common/img/top-menu-icon-05.png') }}" width="61" height="61"
-                        alt="採用情報">
-                    採用情報
+                        alt="私たちの活動">
+                    @if (session('key') == 'jp')
+                        私たちの活動
+                    @else
+                        Our Activities
+                    @endif
                 </a>
             </li>
+
             <li class="li04">
-                <a href="about/index.html">
+                <a href="{{ route('job.index') }}">
                     <img src="{{ asset('common/img/top-menu-icon-02.png') }}" width="61" height="61"
                         alt="会社案内">
-                    会社案内
+                    @if (session('key') == 'jp')
+                        求人情報
+                    @else
+                        Job Listings
+                    @endif
                 </a>
             </li>
+
             <li class="li05">
-                <a href="office/index.html">
+                <a href="{{ route('recruitment_process') }}">
                     <img src="{{ asset('common/img/top-menu-icon-04.png') }}" width="61" height="61"
                         alt="全国営業網">
-                    全国営業網
+                    @if (session('key') == 'jp')
+                        海外採用の流れ
+                    @else
+                        Overseas Recruitment Process
+                    @endif
                 </a>
             </li>
+
             <li class="li06">
                 <a href="{{ route('contact.index') }}">
                     <img src="{{ asset('common/img/top-menu-icon-06.png') }}" width="61" height="61"
                         alt="お問い合わせ">
-                    お問い合わせ
+                    @if (session('key') == 'jp')
+                        お問い合わせ
+                    @else
+                        Contact Us
+                    @endif
                 </a>
             </li>
         </ul>
