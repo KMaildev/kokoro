@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* 各印刷設定情報 */
+@media print {
+
+thead {display:table-header-group;}
+
+.page-top {display:none !important;width:0 !important;height:0 !important;}
+
+hr {border:none;display:block;page-break-after:always;}
+
+.nav {position:initial;top:0;}
+
+.ie8 body, .ie9 body, body {zoom:90%;}
+
+.ie8 nav.top_0 ul li {zoom:100%; width:360px;}
+.ie8 nav.top_0 ul li.li01 a, .ie8 nav.top_0 ul li.li03 a, .ie8 nav.top_0 ul li.li05 a {padding-left:40px;}
+.ie8 nav.top_0 ul li.li02 a, .ie8 nav.top_0 ul li.li04 a, .ie8 nav.top_0 ul li.li06 a {padding-left:20px;}
+.ie8 nav.top_0 ul li.li01 { left: 0; top: -43px; height:279px; }
+.ie8 nav.top_0 ul li.li02 { left: 360px; top: -43px; }
+.ie8 nav.top_0 ul li.li03 { left: 720px; top: -43px; height:279px; }
+.ie8 nav.top_0 ul li.li04 { left: 0; top: 236px; }
+.ie8 nav.top_0 ul li.li05 { left: 360px; top: 101px; height:279px; }
+.ie8 nav.top_0 ul li.li06 { left: 720px; top: 236px; }
+
+.ie8 div h1 {width:213px;height:21px;display:list-item;list-style-image:url("../img/title.png");list-style-position:inside;}
+
+.ie8 .p_nav ul li {background-image:url("../img/menu_border.png");}
+
+table.middle_text {page-break-before:always;vertical-align:middle;}
+
+/*ChromeとOperaのみだけに適用されるCSSハック*/
+_::content, _:future, body:not(*:root) {}
+
+/*Firefoxだけに適用されるCSSハック*/
+@-moz-document url-prefix() {
+  body {}
+}
+
+/*IE10以降に適用されるCSSハック（一応）*/
+@media all and (-ms-high-contrast:none){
+  body {}
+}
+
+/*IE11だけに適用されるCSSハック*/
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop, body {}
+}
+
+/*Safariだけに適用されるCSSハック*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::i-block-chrome, body {}
+}
+
+}
