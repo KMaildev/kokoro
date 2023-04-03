@@ -1,4 +1,5 @@
-<header class="page">
+<header class="page"
+    style="background-image: url(https://www.wowtravelclub.com/wp-content/uploads/2019/03/Japan-banner.jpg)">
     <div>
         <section>
             <h1>

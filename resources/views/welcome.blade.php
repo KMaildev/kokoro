@@ -8,27 +8,28 @@
     <meta name="Keywords" content="Kokoro Japanese Language School">
     <meta name="Description" content="Kokoro Japanese Language School">
     <meta name="author" content="Kokoro Japanese Language School">
+    <meta property="og:image" content="{{ asset('data/logo.jpeg') }}" />
+
     <link href="{{ asset('common/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('common/css/print.css') }}" rel="stylesheet" media="print">
     <link href="{{ asset('common/css/normalize.css') }}" rel="stylesheet">
 </head>
 
 <body id="wrap" onLoad="initRollovers(); cms('news/log.txt');">
-    <header>
+    <header style="background-image: url({{ asset('data/topbanner.jpeg') }})">
         <div>
             <p>
                 <img src="{{ asset('common/img/subtitle2.png') }}" width="409" height="70"
-                    alt="ビルに輝きを与え続ける太平ビルサービス">
+                    alt="Ko Ko Ro">
             </p>
         </div>
     </header>
 
     <nav class="top_0">
         <ul>
-            <li class="li01">
+            <li class="li01" style="background-image: url({{ asset('data/company.svg') }})">
                 <a href="{{ route('about.index') }}">
-                    <img src="{{ asset('common/img/top-menu-icon-01.png') }}" width="61" height="61"
-                        alt="事業内容">
+                    <img src="{{ asset('data/company.png') }}" width="61" height="61" alt="事業内容">
                     @if (session('key') == 'jp')
                         会社案内
                     @else
@@ -51,8 +52,7 @@
 
             <li class="li03">
                 <a href="{{ route('activities.index') }}">
-                    <img src="{{ asset('common/img/top-menu-icon-05.png') }}" width="61" height="61"
-                        alt="私たちの活動">
+                    <img src="{{ asset('data/photo-gallery.png') }}" width="61" height="61" alt="私たちの活動">
                     @if (session('key') == 'jp')
                         私たちの活動
                     @else
@@ -87,8 +87,7 @@
 
             <li class="li06">
                 <a href="{{ route('contact.index') }}">
-                    <img src="{{ asset('common/img/top-menu-icon-06.png') }}" width="61" height="61"
-                        alt="お問い合わせ">
+                    <img src="{{ asset('data/communicate.png') }}" width="61" height="61" alt="お問い合わせ">
                     @if (session('key') == 'jp')
                         お問い合わせ
                     @else
